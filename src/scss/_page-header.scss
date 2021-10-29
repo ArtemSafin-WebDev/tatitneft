@@ -1,0 +1,72 @@
+.page-header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    color: white;
+}
+
+.page-header__row {
+    padding: 5rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.page-header__logo {
+    flex-shrink: 0;
+}
+
+
+
+
+.page-header__logo-image {
+    display: block;
+    height: auto;
+    width: 31rem;
+    margin-bottom: 3rem;
+}
+
+.page-header__menu {
+    width: 50%;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.page-header__menu-nav {
+    width: 50%;
+    flex-grow: 1;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    justify-content: center;
+}
+
+.page-header__menu-nav-link {
+    font-size: 2.5rem;
+    line-height: 1.2;
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
+}
+
+.page-header__contact-link {
+    flex-shrink: 0;
+    padding: 1.3rem 2rem;
+    border-radius: 1.5rem;
+    font-weight: 500;
+    border: .3rem solid var(--primary-color);
+    display: inline-flex;
+    font-size: 2.5rem;
+    transition: background-color .2s, color .2s;
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: var(--primary-color);
+        color: white;
+    }
+}

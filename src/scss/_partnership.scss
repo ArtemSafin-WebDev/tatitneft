@@ -1,0 +1,100 @@
+.partnership {
+    margin-bottom: 25rem;
+
+    .inner-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.partnership__heading {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 500;
+    margin-bottom: 15rem;
+    padding-top: 2.5rem;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 15rem;
+        height: 0.2rem;
+        top: 0;
+        background-color: var(--primary-color);
+    }
+}
+
+.partnership__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -3.5rem;
+    justify-content: center;
+}
+
+.partnership__list-item {
+    width: 33.33%;
+    padding: 3.5rem;
+    flex-grow: 1;
+}
+
+.partnership__card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.partnership__card-icon-container {
+    align-self: center;
+    margin-bottom: 5rem;
+    width: 12rem;
+    height: 12rem;
+
+    position: relative;
+    z-index: 10;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 12rem;
+        height: 12rem;
+        background-color: var(--primary-color);
+        border-radius: 1.5rem;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        margin-left: -2.5rem;
+        margin-top: 2rem;
+    }
+}
+
+.partnership__card-icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.partnership__card-text {
+    font-weight: 300;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.partnership__become-partner {
+    display: inline-flex;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: white;
+    padding: 1.7rem 2.4rem;
+    border-radius: 1rem;
+    background-color: var(--primary-color);
+    align-self: center;
+    margin-top: 12rem;
+    &:link,
+    &:visited {
+        color: white;
+    }
+}
