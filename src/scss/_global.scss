@@ -12,6 +12,11 @@
     --primary-color: #009c3d;
     --text-color: black;
     --montserrat: 'Montserrat', sans-serif;
+    --slant-angle: -11.5deg;
+    --slant-offset: 41rem;
+    @include breakpoint(mobile) {
+        --content-padding: 2.5rem;
+    }
 }
 
 html {
@@ -20,6 +25,11 @@ html {
     -webkit-text-size-adjust: 100%;
     font-size: clamp(5px, 0.5vw, 25px);
     @include noHighlight();
+
+
+    @include breakpoint(mobile) {
+        font-size: 10px;
+    }
 }
 
 body {

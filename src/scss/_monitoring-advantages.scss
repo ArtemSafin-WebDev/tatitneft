@@ -1,0 +1,85 @@
+.monitoring-advantages {
+    margin-bottom: 17rem;
+}
+
+.monitoring-advantages__heading {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 500;
+    margin-bottom: 15rem;
+    padding-top: 2.5rem;
+    position: relative;
+    @include breakpoint(mobile) {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        padding-top: 1.5rem;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 15rem;
+        height: 0.3rem;
+        top: 0;
+        background-color: var(--primary-color);
+        @include breakpoint(mobile) {
+            width: 10rem;
+        }
+    }
+}
+
+.monitoring-advantages__list {
+    width: 100%;
+
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 8rem;
+}
+
+.monitoring-advantages__card {
+    position: relative;
+
+    &::before {
+        content: '';
+        right: 100%;
+        bottom: 100%;
+        width: 5rem;
+        height: 0.2rem;
+        transform: rotate(-45deg);
+        background-color: var(--primary-color);
+        position: absolute;
+    }
+}
+
+.monitoring-advantages__card-text {
+    font-weight: 300;
+    font-size: 2.5rem;
+}
+
+.monitoring-advantages__image-wrapper {
+    position: relative;
+
+    margin: 0 auto;
+    margin-top: 15rem;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        width: 80rem;
+        background-color: #e6e6e6;
+        position: absolute;
+        z-index: -1;
+        transform: rotate(var(--slant-angle, 0)) skewX(var(--slant-angle, 0));
+        height: 18rem;
+        bottom: 7rem;
+
+        left: -40rem;
+    }
+}
+
+.monitoring-advantages__image {
+    max-width: 110rem;
+    margin: 0 auto;
+}

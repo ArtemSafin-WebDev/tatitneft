@@ -1,9 +1,13 @@
 .intro {
     position: relative;
     z-index: 1;
-    padding-top: 28rem;
+
     margin-bottom: 15rem;
     color: white;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 7rem;
+    }
 }
 
 .intro__bg {
@@ -14,46 +18,136 @@
     height: auto;
     z-index: -1;
     pointer-events: none;
+
+    @include breakpoint(mobile) {
+        height: 100%;
+        left: calc((100vw - 100% - var(--sb-width, 0)) / 2 * -1);
+        right: calc((100vw - 100% - var(--sb-width, 0)) / 2 * -1);
+        width: auto;
+        height: auto;
+        top: 0;
+        bottom: -5rem;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 100%;
+        margin-top: -23rem;
+        height: 15rem;
+        width: 70%;
+        background-color: #e6e6e6;
+        transform: skewY(var(--slant-angle, 0));
+        z-index: 30;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+}
+
+.intro__bg-image-wrapper {
+    @include breakpointMF(small-tablet) {
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--slant-offset, 0)), 0 100%);
+    }
+
+    @include breakpoint(mobile) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3rem), 0 100%);
+    }
+}
+
+.intro__content {
+    padding-top: 28rem;
+    padding-bottom: 20rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 14rem;
+        padding-bottom: 7rem;
+        position: relative;
+    }
+}
+
+.intro__bg-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    @include breakpoint(mobile) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 .intro__main-heading {
     font-weight: 500;
     font-size: 8rem;
     line-height: 1.2;
+
+    @include breakpoint(mobile) {
+        font-size: 4rem;
+    }
 }
 
 .intro__main-heading-text {
     font-size: 5rem;
     font-weight: 500;
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+    }
 }
 
 .intro__heading-block {
     margin-bottom: 12rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 5rem;
+    }
 }
 
 .intro__resident {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 20rem;
 }
 
 .intro__resident-heading {
     font-weight: 500;
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+    }
 }
 
 .intro__resident-image {
     width: 29rem;
     height: auto;
     display: block;
+
+    @include breakpoint(mobile) {
+        width: 15rem;
+    }
 }
 
 .intro__advantages-list {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 5rem;
+
+    @include breakpoint(mobile) {
+        grid-gap: 2rem;
+        grid-template-columns: minmax(0, 1fr);
+    }
 }
 
 .intro__advantages-list-item {
@@ -70,7 +164,10 @@
     border-radius: 1.5rem;
     box-shadow: 1rem 1rem 2rem rgba(black, 0.2);
     color: #333333;
-   
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+    }
 }
 
 .intro__advantages-card-icon {
@@ -79,6 +176,11 @@
     width: 100%;
     object-fit: contain;
     margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        height: 8rem;
+        margin-bottom: 2rem;
+    }
 }
 
 .intro__advantages-card-title {
@@ -86,9 +188,18 @@
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     color: var(--primary-color);
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .intro__advantages-card-text {
     font-size: 2.2rem;
     font-weight: 300;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+    }
 }

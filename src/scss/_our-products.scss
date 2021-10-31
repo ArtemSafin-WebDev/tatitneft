@@ -1,5 +1,9 @@
 .our-products {
     margin-bottom: 20rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 5rem;
+    }
 }
 
 .our-products__heading {
@@ -9,15 +13,25 @@
     margin-bottom: 10rem;
     padding-top: 2.5rem;
     position: relative;
+
+    @include breakpoint(mobile) {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        padding-top: 1.5rem;
+    }
     &::before {
         content: '';
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
         width: 15rem;
-        height: 0.2rem;
+        height: 0.3rem;
         top: 0;
         background-color: var(--primary-color);
+
+        @include breakpoint(mobile) {
+            width: 10rem;
+        }
     }
 }
 
@@ -25,42 +39,48 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     grid-gap: 9rem;
+
+    @include breakpoint(mobile) {
+        grid-gap: 2rem;
+    }
 }
 
 .our-products__list-item {
     position: relative;
     z-index: 1;
 
-    &:first-child {
-        &::before {
-            content: '';
-            position: absolute;
-            width: 90rem;
-            height: 35rem;
-            background-image: url('../img/grey-rectangle.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            z-index: -1;
-            left: -60rem;
-            top: -8rem;
-        }
-    }
+    @include breakpointMF(small-tablet) {
+        &:first-child {
+            &::before {
+                content: '';
+                position: absolute;
+                width: 90rem;
+                height: 16rem;
 
-    &:last-child {
-        &::after {
-            content: '';
-            content: '';
-            position: absolute;
-            width: 90rem;
-            height: 35rem;
-            background-image: url('../img/green-rectangle.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            z-index: -1;
-            right: -60rem;
-            bottom: -8rem;
+                z-index: -1;
+
+                background-color: #e6e6e6;
+                transform: skewY(var(--slant-angle, 0));
+                right: 100%;
+                top: 0;
+                margin-right: -45rem;
+            }
+        }
+
+        &:last-child {
+            &::after {
+                content: '';
+                content: '';
+                position: absolute;
+                width: 90rem;
+                height: 16rem;
+                transform: skewY(var(--slant-angle, 0));
+                background-color: #009c3d;
+                z-index: -1;
+                left: 100%;
+                margin-left: -45rem;
+                bottom: 0;
+            }
         }
     }
 }
@@ -73,6 +93,11 @@
     flex-direction: column;
     padding: 5rem 5rem;
     color: white;
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+        min-height: 30rem;
+    }
 
     &:link,
     &:visited {
@@ -91,6 +116,10 @@
     overflow: hidden;
     backface-visibility: hidden;
     transform: translateZ(0);
+
+    @include breakpoint(mobile) {
+        border-radius: 1rem;
+    }
     &::after {
         content: '';
         position: absolute;
@@ -116,6 +145,10 @@
     line-height: 1.2;
     font-weight: 500;
     margin-bottom: 1rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+    }
 }
 
 .our-products__card-text {
@@ -123,6 +156,10 @@
     line-height: 1.2;
     max-width: 75rem;
     margin-bottom: 3rem;
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        max-width: none;
+    }
 }
 
 .our-products__card-link {
@@ -136,6 +173,12 @@
     color: white;
     border-radius: 1rem;
     padding: 1.5rem 1.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        padding: 1rem 1.6rem;
+        border-radius: .8rem;
+    }
     &:link,
     &:visited {
         color: white;

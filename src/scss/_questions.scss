@@ -1,0 +1,129 @@
+.questions {
+    margin-bottom: 25rem;
+}
+
+.questions__heading {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    padding-top: 2.5rem;
+    position: relative;
+    @include breakpoint(mobile) {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        padding-top: 1.5rem;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 15rem;
+        height: 0.3rem;
+        top: 0;
+        background-color: var(--primary-color);
+        @include breakpoint(mobile) {
+            width: 10rem;
+        }
+    }
+}
+
+.questions__heading-text {
+    font-weight: 500;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.questions__comparison {
+    margin-top: 8rem;
+    position: relative;
+}
+
+.questions__comparison-woman {
+    left: 100%;
+    margin-left: -50rem;
+    top: 0;
+    width: 80rem;
+    height: auto;
+    position: absolute;
+    z-index: 100;
+}
+
+.questions__list {
+    max-width: 100rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 3.8rem;
+}
+
+.questions__card {
+    background-color: #fff;
+    padding: 4rem 8rem;
+    padding-right: 14rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1.5rem rgba(black, 0.2);
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    z-index: 1;
+}
+
+.questions__card-bg-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    object-fit: contain;
+}
+
+.questions__card-heading {
+    font-weight: 800;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.questions__card-list-item {
+    margin-bottom: 2.8rem;
+    font-weight: 300;
+    font-size: 2.5rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.questions__card-list-item-plus,
+.questions__card-list-item-minus {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: 0.8rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+    &::before,
+    &::after {
+        content: '';
+        width: 100%;
+        height: 0.2rem;
+        background-color: var(--primary-color);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &::after {
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+}
+
+.questions__card-list-item-minus {
+    &::after {
+        display: none;
+    }
+}

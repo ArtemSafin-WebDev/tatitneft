@@ -11,6 +11,8 @@ import mediaPlayer from './mediaPlayer';
 import datepicker from './datepicker';
 import accordions from './accordions';
 import modals from './modals';
+import menu from './menu';
+import interfaceSlider from './interfaceSlider';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -25,6 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
     mediaPlayer();
     modals();
     datepicker();
+    menu();
+    interfaceSlider();
 });
 
 window.addEventListener('load', function() {

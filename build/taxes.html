@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.min.css" />
+    <title>
+        Налоговый мониторинг
+    </title>
+</head>
+
+<body class="no-touch" ontouchstart="">
+    <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+        <?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arrow-left" viewBox="0 0 16 24" xmlns="http://www.w3.org/2000/svg"><defs><style>.acls-1{fill-rule:evenodd}</style></defs><path class="acls-1" d="M16 .75L1.63 12 16 23.22l-.62.78L0 12 15.39 0z"/></symbol><symbol id="arrow-right" viewBox="0 0 16 24" xmlns="http://www.w3.org/2000/svg"><defs><style>.bcls-1{fill-rule:evenodd}</style></defs><path class="bcls-1" d="M0 23.25L14.37 12 0 .78.62 0 16 12 .61 24z"/></symbol><symbol viewBox="0 0 11 19" id="fb" xmlns="http://www.w3.org/2000/svg"><path d="M7.06 6.38V4.51c0-.84.19-1.26 1.49-1.26h1.64V.13H7.46C4.11.13 3 1.66 3 4.29v2.09H.81V9.5H3v9.38h4.06V9.5h2.76l.37-3.12z"/></symbol><symbol viewBox="0 0 14 20" id="ok" xmlns="http://www.w3.org/2000/svg"><path d="M12.83 10.74c-.28-.57-1.07-1.05-2.12-.24A6.84 6.84 0 017 11.64a6.84 6.84 0 01-3.71-1.14c-1-.81-1.84-.33-2.12.24-.5 1 .06 1.49 1.33 2.3A8.54 8.54 0 006 14.1l-.8.8-.03.1C4.06 16.07 3 17.14 2.25 17.88a1.14 1.14 0 000 1.62l.14.16a1.16 1.16 0 001.64 0l3-3c1.15 1.13 2.24 2.22 3 3a1.16 1.16 0 001.64 0l.13-.16a1.12 1.12 0 000-1.62l-3-3-.8-.79A8.35 8.35 0 0011.5 13c1.27-.77 1.83-1.26 1.33-2.26z"/><path d="M7 10.12a5.06 5.06 0 10-5.06-5.06A5.05 5.05 0 007 10.12zm0-7.55a2.49 2.49 0 11-2.5 2.49A2.5 2.5 0 017 2.57z"/></symbol><symbol viewBox="0 0 18 15" id="twitter" xmlns="http://www.w3.org/2000/svg"><path d="M18 1.78a7.17 7.17 0 01-2.12.59A3.77 3.77 0 0017.5.28a7.33 7.33 0 01-2.34.92 3.66 3.66 0 00-2.7-1.2 3.74 3.74 0 00-3.69 3.79 3.55 3.55 0 00.1.86 10.45 10.45 0 01-7.62-4 3.94 3.94 0 00-.5 1.95A3.82 3.82 0 002.4 5.75a3.67 3.67 0 01-1.68-.47A3.78 3.78 0 003.69 9a3.93 3.93 0 01-1 .13A3.17 3.17 0 012 9.1a3.7 3.7 0 003.45 2.63 7.29 7.29 0 01-4.57 1.62 8.49 8.49 0 01-.88 0A10.3 10.3 0 005.66 15c6.79 0 10.51-5.77 10.51-10.77v-.49A7.63 7.63 0 0018 1.78z"/></symbol><symbol viewBox="0 0 20 12" id="vk" xmlns="http://www.w3.org/2000/svg"><path d="M17.54 7.6a8.51 8.51 0 011.92 2.22c.64 1.06-.7 1.14-.7 1.14h-2.58a1.81 1.81 0 01-1.28-.39c-1-.66-1.9-2.39-2.59-2.16s-.69 1.78-.69 1.78a.62.62 0 01-.16.39.65.65 0 01-.53.12H9.78A6.24 6.24 0 015 8.67C2.55 6.13.39 1.13.39 1.13S.27.83.4.66 1 .5 1 .5h2.73a.72.72 0 01.44.16.89.89 0 01.24.34 17.61 17.61 0 001 2.13c1.15 2 1.68 2.42 2.05 2.21.6-.31.43-2.81.43-2.81a2.76 2.76 0 00-.29-1.31 1.3 1.3 0 00-.82-.43c-.16 0 .1-.38.43-.55A6.58 6.58 0 019.62 0 4.85 4.85 0 0111 .13c1 .23.63 1.12.63 3.24 0 .69-.1 1.63.37 2 .21.14.73 0 2-2.17A17.63 17.63 0 0015.06.89a.89.89 0 01.25-.31 1 1 0 01.38-.08h2.9s.88-.1 1 .29-.33 1.38-1.52 3c-1.92 2.55-2.14 2.31-.53 3.81z" fill-rule="evenodd"/></symbol></svg>    </div>
+
+    <div class="page-content">
+        <header class="page-header">
+            <div class="container">
+                <div class="page-header__row">
+                    <a href="#" class="page-header__logo">
+                        <img src="img/logo.png" alt="" class="page-header__logo-image">
+                    </a>
+                    <div class="page-header__menu">
+                        <nav class="page-header__menu-nav">
+                            <a href="#" class="page-header__menu-nav-link">
+                                О компании
+                            </a>
+                            <a href="#" class="page-header__menu-nav-link">
+                                Наши продукты
+                            </a>
+                            <a href="#" class="page-header__menu-nav-link">
+                                Партнерам
+                            </a>
+                        </nav>
+        
+                        <a href="#" class="page-header__contact-link">
+                            Свяжитесь с нами
+                        </a>
+                    </div>
+                    <button class="page-header__burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </header>        <main class="page-main">
+
+<section class="taxes-intro">
+    <div class="taxes-intro__bg">
+        <div class="taxes-intro__bg-image-wrapper">
+
+
+            <img src="img/taxes-intro-bg.jpg" alt="" class="taxes-intro__bg-image">
+        </div>
+    </div>
+    <div class="container">
+        <div class="inner-container">
+            <div class="taxes-intro__content">
+
+
+
+                <h1 class="taxes-intro__heading">
+                    Налоговый мониторинг
+                </h1>
+                <div class="taxes-intro__heading-text">
+                    <p>
+                        Платформа онлайн-взаимодействия
+                        с налоговыми органами
+                    </p>
+                </div>
+                <a href="#" class="taxes-intro__consultation">
+                    Бесплатная консультация
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="monitoring-advantages">
+    <div class="container">
+        <div class="inner-container">
+            <h2 class="monitoring-advantages__heading">
+                Преимущества<br>
+                налогового мониторинга
+            </h2>
+            <ul class="monitoring-advantages__list">
+                <li class="monitoring-advantages__list-item">
+                    <div class="monitoring-advantages__card">
+                        <div class="monitoring-advantages__card-text">
+                            <p>
+                                Снижение количества штрафов за счет мотивированных мнений налоговых органов
+                                по конкретным вопросам
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="monitoring-advantages__list-item">
+                    <div class="monitoring-advantages__card">
+                        <div class="monitoring-advantages__card-text">
+                            <p>
+                                Снижение резервов по неопределенным налоговым
+                                позициям до 40% преимущества налогового мониторинга
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="monitoring-advantages__list-item">
+                    <div class="monitoring-advantages__card">
+                        <div class="monitoring-advantages__card-text">
+                            <p>
+                                Сокращение объема бумажного документооборота
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="monitoring-advantages__list-item">
+                    <div class="monitoring-advantages__card">
+                        <div class="monitoring-advantages__card-text">
+                            <p>
+                                Сокращение сроков закрытия налоговой проверки до 3 раз
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="monitoring-advantages__list-item">
+                    <div class="monitoring-advantages__card">
+                        <div class="monitoring-advantages__card-text">
+                            <p>
+                                Сокращение затрат на сопровождение налоговых проверок от 15%
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="monitoring-advantages__image-wrapper">
+                <img data-src="img/laptop.png" alt="" class="monitoring-advantages__image lazyload">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="questions">
+    <div class="container">
+        <div class="inner-container">
+            <h2 class="questions__heading">
+                Вопросы при выборе IT-решения
+            </h2>
+            <div class="questions__heading-text">
+                <p>
+                    Разработать своими силами или приобрести готовое решение?
+                </p>
+            </div>
+            <div class="questions__comparison">
+                <img data-src="img/woman-1.png" alt="" class="questions__comparison-woman lazyload">
+
+                <ul class="questions__list">
+                    <li class="questions__list-item">
+                        <div class="questions__card">
+                            <img data-src="img/pluses.png" alt="" class="questions__card-bg-image lazyload">
+                            <h3 class="questions__card-heading">
+                                ПЛЮСЫ СВОЕЙ РАЗРАБОТКИ
+                            </h3>
+                            <ul class="questions__card-list">
+                                <li class="questions__card-list-item">
+                                    <span class="questions__card-list-item-plus">
+
+                                    </span>
+                                    Решение "только для вас" позволяет учесть все требования к системе
+                                </li>
+                                <li class="questions__card-list-item">
+                                    <span class="questions__card-list-item-plus">
+
+                                    </span>
+                                    Глубокая собственная экспертиза и погруженность в процессы ИТ
+                                </li>
+                                <li class="questions__card-list-item">
+                                    <span class="questions__card-list-item-plus">
+
+                                    </span>
+                                    Собственная "база знаний" . не передается внешнему подрядчику
+                                </li>
+                                <li class="questions__card-list-item">
+                                    <span class="questions__card-list-item-plus">
+
+                                    </span>
+                                    Отсутствие закупочных и тендорных процедур
+                                </li>
+                                <li class="questions__card-list-item">
+                                    <span class="questions__card-list-item-plus">
+
+                                    </span>
+                                    Экономия бюджета на первом этапе проекта
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="questions__list-item">
+                        <div class="questions__card">
+                            <img data-src="img/minuses.png" alt="" class="questions__card-bg-image lazyload">
+                            <h3 class="questions__card-heading">
+                                МИНУСЫ СВОЕЙ РАЗРАБОТКИ
+                            </h3>
+                            <ul class="questions__card-list">
+                                <li class="questions__card-list-item">
+                                    <span class="questions__card-list-item-minus">
+
+                                    </span>
+                                    Низкая оперативность, доработки и внесения изменений
+                                    по требованиям законодательства
+                                </li>
+                                <li class="questions__card-list-item">
+                                    <span class="questions__card-list-item-minus">
+
+                                    </span>
+                                    Собственная разработка требует высокой и постоянной вовлечённости в тематику
+                                </li>
+                                <li class="questions__card-list-item">
+                                    <span class="questions__card-list-item-minus">
+
+                                    </span>
+                                    Увеличения загрузки собственного IT- подразделения
+                                </li>
+                                <li class="questions__card-list-item">
+                                    <span class="questions__card-list-item-minus">
+
+                                    </span>
+                                    Отсутствие внешнего опыта не позволит использовать лучшие практики в развитии
+                                    решения
+                                </li>
+                                <li class="questions__card-list-item">
+                                    <span class="questions__card-list-item-minus">
+
+                                    </span>
+                                    Высокая зависимость разработанного решения
+                                    от штатного программиста
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="what-to-choose">
+    <div class="what-to-choose__bg">
+        <img data-src="img/woman-2.png" alt="" class="what-to-choose__woman-image lazyload">
+        <div class="what-to-choose__bg-grey-backplate">
+
+        </div>
+        <div class="what-to-choose__bg-section-number">
+            01
+        </div>
+    </div>
+    <div class="container">
+        <div class="inner-container">
+            <h2 class="what-to-choose__heading">
+                На что обратить внимание при выборе готового решения?
+            </h2>
+            <div class="what-to-choose__heading-text">
+                <p>
+                    Функции и технологии
+                </p>
+            </div>
+            <ul class="what-to-choose__list">
+                <li class="what-to-choose__list-item">
+                    <div class="what-to-choose__card">
+                        <img data-src="img/what-to-choose/1.png" alt="" class="what-to-choose__card-icon lazyload">
+                        <h3 class="what-to-choose__card-heading">
+                            Общие критерии
+                        </h3>
+                        <div class="what-to-choose__card-text">
+                            <p>
+                                Возможность использовать решение для внутренних задач
+                            </p>
+                            <p>
+                                Использование решения
+                                для консолидации и анализа налоговых данных по участникам налогового мониторинга одной
+                                группы
+                            </p>
+                            <p>
+                                Анализ, планирование и контроль налоговых показателей в решении
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="what-to-choose__list-item">
+                    <div class="what-to-choose__card">
+                        <img data-src="img/what-to-choose/2.png" alt="" class="what-to-choose__card-icon lazyload">
+                        <h3 class="what-to-choose__card-heading">
+                            Функциональные критерии
+                        </h3>
+                        <div class="what-to-choose__card-text">
+                            <p>
+                                Решение всех задач участника налогового мониторинга в одном продукте
+
+                            </p>
+                            <p>
+                                Настройка решения без перепрограммирования
+                            </p>
+                            <p>
+                                Гибкая настройка интеграции
+                                под учетные системы и ЭХД
+                            </p>
+                            <p>
+                                Возможность автоматизировать расчёт регистров, деклараций
+                            </p>
+                            <p>
+                                Формирование отчетов в формате XML, включая установленные приказом ФНС России 23.10.2020
+                                ЕД-7-15/772@
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="what-to-choose__list-item">
+                    <div class="what-to-choose__card">
+                        <img data-src="img/what-to-choose/3.png" alt="" class="what-to-choose__card-icon lazyload">
+                        <h3 class="what-to-choose__card-heading">
+                            Технологические критерии
+
+                        </h3>
+                        <div class="what-to-choose__card-text">
+                            <p>
+                                Производительность решения
+                            </p>
+                            <p>
+                                Устойчивость к высоким нагрузкам системы
+
+                            </p>
+                            <p>
+                                Способность масштабироваться под крупные инсталляция
+                            </p>
+                            <p>
+                                Использование современных технологий и языков программирования
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<section class="product">
+    <img data-src="img/laptop-hands.png" alt="" class="product__laptop-hands lazyload">
+    <img data-src="img/woman-3.png" alt="" class="product__woman lazyload">
+    <div class="product__section-number">
+        02
+    </div>
+    <div class="container">
+        <div class="inner-container">
+            <h2 class="product__heading">
+                Производитель и продукт
+            </h2>
+            <ul class="product__list">
+                <li class="product__list-item">
+                    <div class="product__card">
+                        <h3 class="product__card-heading">
+                            Производитель - Разработчик IT-cистем
+                        </h3>
+                        <ul class="product__card-list">
+                            <li class="product__card-list-item">
+                                Гарантированное развитие функциональности lT- cистемы
+                            </li>
+                            <li class="product__card-list-item">
+                                Поставка обновлений под развитие функциональности
+                                и исправление ошибок
+                            </li>
+                            <li class="product__card-list-item">
+                                Использование лучших практик и опыта других внедрений
+                            </li>
+                            <li class="product__card-list-item">
+                                Постоянная актуализация IT- системы с учётом перспективных изменений законодательных
+                                требований
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="product__list-item">
+                    <div class="product__card">
+                        <h3 class="product__card-heading">
+                            Производитель - Консалтинговая/аудиторская компания
+                        </h3>
+                        <ul class="product__card-list">
+                            <li class="product__card-list-item">
+                                Заказная разработка под требования Заказчика
+                            </li>
+                            <li class="product__card-list-item">
+                                Доработка и развитие производится в рамках отдельного проекта либо договора
+                            </li>
+                            <li class="product__card-list-item">
+                                План развития решения обычно отсутствует, развитие производится только по возникновению
+                                потребности конкретного заказчика
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="product__list-item">
+                    <div class="product__card">
+                        <h3 class="product__card-heading">
+                            Документация по решению
+                        </h3>
+                        <ul class="product__card-list">
+                            <li class="product__card-list-item">
+                                Поддерживается и актуализируется по мере развития IT- системы
+                            </li>
+                            <li class="product__card-list-item">
+                                Находится в открытом доступе, либо оперативно предоставляется Заказчику
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="transition-map">
+    <div class="transition__map-bg">
+        <div class="transition__map-bg-image-wrapper">
+            <img data-src="img/man-with-notebook.jpg" alt="" class="transition__map-bg-image lazyload">
+        </div>
+    </div>
+    <div class="container">
+        <div class="inner-container">
+            <h2 class="transition-map__heading">
+                Карта перехода на налоговый мониторинг
+            </h2>
+            <ol class="transition__map-list">
+                <li class="transition__map-list-item">
+                    <div class="transition__map-card">
+                        <div class="transition__map-card-number">
+                            <div class="transition__map-card-number-digit">
+
+                            </div>
+                        </div>
+                        <h3 class="transition__map-card-heading">
+                            Обследование – Июнь
+                        </h3>
+                        <div class="transition__map-card-text">
+                            <p>
+                                Изучение текущих процессов налогового учета, формирование отчетности, построение модели.
+                            </p>
+                            <p>
+                                Диагностика текущих IT- систем.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="transition__map-list-item">
+                    <div class="transition__map-card">
+                        <div class="transition__map-card-number">
+                            <div class="transition__map-card-number-digit">
+
+                            </div>
+                        </div>
+                        <h3 class="transition__map-card-heading">
+                            Проектирование – Июль-Сентябрь
+                        </h3>
+                        <div class="transition__map-card-text">
+                            <p>
+                                Разработка функциональных требований к системе налогового мониторинга, системе
+                                внутренних контролей.
+                            </p>
+                            <p>
+                                Разработка методологии раскрытия показателей.
+                            </p>
+                            <p>
+                                Разработка проектных технических решений.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="transition__map-list-item">
+                    <div class="transition__map-card">
+                        <div class="transition__map-card-number">
+                            <div class="transition__map-card-number-digit">
+
+                            </div>
+                        </div>
+                        <h3 class="transition__map-card-heading">
+                            Реализация – Сентябрь- Декабрь
+                        </h3>
+                        <div class="transition__map-card-text">
+                            <p>
+                                Оптимизация текущих процессов в соответствии с требованиями раскрытия отчетности
+
+                            </p>
+                            <p>
+                                Настройка системы налогового мониторинга, системы внутренних контролей и управления
+                                рисками.
+
+                            </p>
+                            <p>
+                                Реализация требуемых доработок.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="transition__map-list-item">
+                    <div class="transition__map-card">
+                        <div class="transition__map-card-number">
+                            <div class="transition__map-card-number-digit">
+
+                            </div>
+                        </div>
+                        <h3 class="transition__map-card-heading">
+                            Подготовка к эксплуатации – Декабрь
+                        </h3>
+                        <div class="transition__map-card-text">
+                            <p>
+                                Разработка пакета документации: регламенты и инструкции.
+                            </p>
+                            <p>
+                                Обучение пользователей.
+                            </p>
+                            <p>
+                                Проведение приемочных испытаний системы
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <a href="#" class="transition__map-consultation">
+                Заказать консультацию
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="interface">
+    <div class="container">
+        <div class="inner-container">
+            <h2 class="inteface__heading">
+                Интерфейс программы
+            </h2>
+            <div class="inteface__slider js-interface-slider">
+                <button class="inteface__slider-arrow inteface__slider-arrow--prev">
+                    <svg width="45" height="45" aria-hidden="true" class="icon-arrow-left">
+                        <use xlink:href="#arrow-left"></use>
+                    </svg>
+                </button>
+                <button class="inteface__slider-arrow inteface__slider-arrow--next">
+                    <svg width="45" height="45" aria-hidden="true" class="icon-arrow-right">
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </button>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="inteface__slider-card">
+                                <img data-src="img/slider-image.png" alt="" class="interface__slider-card-image lazyload">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="inteface__slider-card">
+                                <img data-src="img/slider-image.png" alt="" class="interface__slider-card-image lazyload">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="inteface__slider-card">
+                                <img data-src="img/slider-image.png" alt="" class="interface__slider-card-image lazyload">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        </main>
+        <footer class="page-footer">
+            <div class="container">
+                <div class="inner-container">
+        
+        
+                    <div class="page-footer__row">
+                        <a href="#" class="page-footer__logo">
+                            <img src="img/logo.png" alt="" class="page-footer__logo-image">
+                        </a>
+                        <div class="page-footer__content">
+                            <nav class="page-footer__nav">
+                                <a href="#" class="page-footer__nav-link">
+                                    О компании
+                                </a>
+                                <a href="#" class="page-footer__nav-link">
+                                    Наши продукты
+                                </a>
+                                <a href="#" class="page-footer__nav-link">
+                                    Партнерам
+                                </a>
+                            </nav>
+                            <div class="page-footer__contacts">
+                                <div class="page-footer__contacts-item">
+                                    г. Иннополис, ул. Университетская, д. 7
+                                </div>
+                                <div class="page-footer__contacts-item">
+                                    <a href="mailto:info@tatitneft.ru"> info@tatitneft.ru</a>
+                                </div>
+                                <div class="page-footer__contacts-item">
+                                    <a href="tel:+79990008899"> +7 999 000 88 99</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>        <style>
+            .ie-placeholder {
+                z-index: 4000;
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #202020;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                
+            }
+            .ie-placeholder__message {
+                font-size: 2rem;
+                line-height: 1.2;
+                font-weight: 500;
+                margin: auto;
+            }
+            @supports (display: grid) {
+                .ie-placeholder {
+                    display: none;
+                }
+            }
+        </style>
+        <div class="ie-placeholder">
+            <div class="ie-placeholder__message">
+                Извините, ваш браузер не поддерживается
+            </div>
+        </div>        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="assets/js/backend.js"></script>
+    </div>
+</body>
+
+</html>

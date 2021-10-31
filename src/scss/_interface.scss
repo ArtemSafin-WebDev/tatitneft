@@ -1,0 +1,113 @@
+.interface {
+    margin-bottom: 25rem;
+}
+
+.inteface__heading {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 500;
+    margin-bottom: 8rem;
+    padding-top: 2.5rem;
+    position: relative;
+    @include breakpoint(mobile) {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        padding-top: 1.5rem;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 15rem;
+        height: 0.3rem;
+        top: 0;
+        background-color: var(--primary-color);
+        @include breakpoint(mobile) {
+            width: 10rem;
+        }
+    }
+}
+
+.inteface__slider {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 100rem;
+    margin: 0 auto;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 180rem;
+        height: 90rem;
+       
+       
+        background-image: url('../img/rectangles.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: -1;
+    }
+}
+
+.inteface__slider-arrow {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    z-index: 30;
+    transition: opacity .2s;
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        transition: fill .2s;
+    }
+    &--prev {
+        right: 100%;
+        margin-right: -9rem;
+    }
+
+    &--next {
+        left: 100%;
+        margin-left: -9rem;
+    }
+
+
+    &.swiper-button-disabled {
+        cursor: default;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+
+    .no-touch &:not(.swiper-button-disabled):hover,
+    .touch &:not(.swiper-button-disabled):active {
+        svg {
+            fill: var(--primary-color);
+        }
+    }
+}
+
+.inteface__slider-card {
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 56.25%;
+    }
+}
+
+.interface__slider-card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

@@ -1,0 +1,113 @@
+.product {
+    margin-bottom: 20rem;
+    position: relative;
+    z-index: 80;
+}
+
+.product__heading {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 500;
+    margin-bottom: 5rem;
+    padding-top: 2.5rem;
+    position: relative;
+    @include breakpoint(mobile) {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        padding-top: 1.5rem;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 15rem;
+        height: 0.3rem;
+        top: 0;
+        background-color: var(--primary-color);
+        @include breakpoint(mobile) {
+            width: 10rem;
+        }
+    }
+}
+
+.product__list {
+    max-width: 100rem;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 2.5rem;
+}
+
+.product__card {
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 1rem 1rem 2rem rgba(black, 0.2);
+    padding: 3rem;
+    padding-right: 10rem;
+}
+
+.product__card-heading {
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.product__card-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.product__card-list-item {
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    font-size: 2.5rem;
+
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background-color: var(--text-color);
+        margin-right: 0.5rem;
+        vertical-align: middle;
+        margin-bottom: 0.3rem;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.product__laptop-hands {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50rem;
+    height: auto;
+    display: block;
+    z-index: -1;
+}
+
+.product__woman {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 60rem;
+    height: auto;
+    z-index: 80;
+    margin-bottom: 2.5rem;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12.5rem), 0 100%);
+}
+
+.product__section-number {
+    font-size: 24rem;
+    font-weight: 500;
+    position: absolute;
+    color: #e6e6e6;
+    top: -30rem;
+    right: 0;
+    padding-right: 5rem;
+}

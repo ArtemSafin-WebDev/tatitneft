@@ -1,0 +1,201 @@
+.transition-map {
+    margin-bottom: 35rem;
+    position: relative;
+    z-index: 1;
+    color: white;
+    margin-top: 0rem;
+    .inner-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.transition__map-bg {
+    position: absolute;
+    left: 0;
+    top: -35rem;
+    width: 100%;
+    bottom: -30rem;
+    z-index: -1;
+
+    &::after {
+        content: '';
+        width: 50%;
+        height: 18rem;
+        background-color: #e6e6e6;
+        transform: rotate(var(--slant-angle, 0)) skew(var(--slant-angle, 0)) translateX(-2rem);
+
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin-bottom: 16rem;
+        margin-right: -4rem;
+    }
+}
+
+.transition__map-bg-image-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 var(--slant-offset, 0), 100% 0, 100% calc(100% - var(--slant-offset, 0)), 0 100%);
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(black, 0.7);
+    }
+}
+
+.transition__map-bg-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.transition-map__heading {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 500;
+    margin-bottom: 9rem;
+    padding-top: 2.5rem;
+    position: relative;
+    @include breakpoint(mobile) {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        padding-top: 1.5rem;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 15rem;
+        height: 0.3rem;
+        top: 0;
+        background-color: var(--primary-color);
+        @include breakpoint(mobile) {
+            width: 10rem;
+        }
+    }
+}
+
+.transition__map-list {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 3rem;
+}
+
+.transition__map-list {
+}
+
+.transition__map-list-item {
+    &::before {
+        display: none;
+    }
+}
+
+.transition__map-card {
+    position: relative;
+}
+
+.transition__map-card-heading {
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.transition__map-card-text {
+    font-weight: 300;
+    font-size: 2.5rem;
+    padding-bottom: 10rem;
+    p {
+        margin-bottom: 2rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .transition__map-list-item:last-child & {
+        padding-bottom: 0;
+    }
+}
+
+.transition__map-card-number {
+    right: 100%;
+    top: 0;
+    bottom: 0;
+    width: 9rem;
+    margin-right: 4rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+
+    &::after {
+        content: '';
+        width: 1px;
+        height: 1rem;
+        flex-grow: 1;
+        background-color: #fff;
+        align-self: center;
+    }
+
+    .transition__map-list-item:last-child & {
+        &::after {
+            display: none;
+        }
+    }
+}
+
+.transition__map-card-number-digit {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    flex-shrink: 0;
+    &::before {
+        content: counter(ordered-list);
+    }
+}
+
+.transition__map-consultation {
+    display: inline-flex;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: white;
+    padding: 1.7rem 2.4rem;
+    border-radius: 1rem;
+    background-color: var(--primary-color);
+    align-self: center;
+    margin-top: 7rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        padding: 1rem 1.6rem;
+        border-radius: 0.8rem;
+        margin-top: 3rem;
+    }
+    &:link,
+    &:visited {
+        color: white;
+    }
+}
