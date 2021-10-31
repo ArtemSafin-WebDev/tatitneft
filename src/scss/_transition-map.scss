@@ -4,6 +4,10 @@
     z-index: 1;
     color: white;
     margin-top: 0rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 10rem;
+    }
     .inner-container {
         display: flex;
         flex-direction: column;
@@ -18,6 +22,11 @@
     bottom: -30rem;
     z-index: -1;
 
+    @include breakpoint(mobile) {
+        top: -5rem;
+        bottom: -5rem;
+    }
+
     &::after {
         content: '';
         width: 50%;
@@ -30,6 +39,10 @@
         bottom: 0;
         margin-bottom: 16rem;
         margin-right: -4rem;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
     }
 }
 
@@ -40,6 +53,10 @@
     width: 100%;
     height: 100%;
     clip-path: polygon(0 var(--slant-offset, 0), 100% 0, 100% calc(100% - var(--slant-offset, 0)), 0 100%);
+
+    @include breakpoint(mobile) {
+        clip-path: polygon(0 3rem, 100% 0, 100% calc(100% - 3rem), 0 100%);
+    }
     &::after {
         content: '';
         position: absolute;
@@ -71,6 +88,7 @@
         font-size: 2.5rem;
         margin-bottom: 3rem;
         padding-top: 1.5rem;
+        
     }
     &::before {
         content: '';
@@ -91,6 +109,10 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     grid-gap: 3rem;
+
+    @include breakpoint(mobile) {
+        grid-gap: 2rem;
+    }
 }
 
 .transition__map-list {
@@ -104,6 +126,13 @@
 
 .transition__map-card {
     position: relative;
+
+    @include breakpoint(mobile) {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        grid-template-areas: 'number heading' 'text text';
+        grid-gap: 1rem;
+    }
 }
 
 .transition__map-card-heading {
@@ -111,14 +140,32 @@
     font-size: 2.5rem;
     margin-bottom: 2rem;
     color: var(--primary-color);
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        padding-left: 0;
+        grid-area: heading;
+        margin: 0;
+        align-self: center;
+    }
 }
 
 .transition__map-card-text {
     font-weight: 300;
     font-size: 2.5rem;
     padding-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        padding-bottom: 0;
+        grid-area: text;
+    }
     p {
         margin-bottom: 2rem;
+
+        @include breakpoint(mobile) {
+            margin-bottom: 1.5rem;
+        }
         &:last-child {
             margin-bottom: 0;
         }
@@ -140,6 +187,21 @@
     flex-direction: column;
     position: absolute;
 
+    @include breakpoint(mobile) {
+        position: absolute;
+        right: auto;
+        top: .4rem;
+        left: 0;
+        position: static;
+        width: auto;
+        margin: 0;
+     
+        align-self: center;
+
+        display: contents;
+      
+    }
+
     &::after {
         content: '';
         width: 1px;
@@ -147,6 +209,10 @@
         flex-grow: 1;
         background-color: #fff;
         align-self: center;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
     }
 
     .transition__map-list-item:last-child & {
@@ -172,6 +238,16 @@
     font-size: 4rem;
     margin-bottom: 3rem;
     flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 1.6rem;
+        margin: 0;
+        grid-area: number;
+        align-self: center;
+        
+    }
     &::before {
         content: counter(ordered-list);
     }

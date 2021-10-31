@@ -1,5 +1,9 @@
 .questions {
     margin-bottom: 25rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 10rem;
+    }
 }
 
 .questions__heading {
@@ -11,7 +15,7 @@
     position: relative;
     @include breakpoint(mobile) {
         font-size: 2.5rem;
-        margin-bottom: 3rem;
+        margin-bottom: 1rem;
         padding-top: 1.5rem;
     }
     &::before {
@@ -33,11 +37,18 @@
     font-weight: 500;
     font-size: 2.5rem;
     text-align: center;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+    }
 }
 
 .questions__comparison {
     margin-top: 8rem;
     position: relative;
+    @include breakpoint(mobile) {
+        margin-top: 3rem;
+    }
 }
 
 .questions__comparison-woman {
@@ -48,6 +59,10 @@
     height: auto;
     position: absolute;
     z-index: 100;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .questions__list {
@@ -55,6 +70,11 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     grid-gap: 3.8rem;
+
+    @include breakpoint(mobile) {
+        grid-gap: 2rem;
+        grid-template-columns: minmax(0, 1fr);
+    }
 }
 
 .questions__card {
@@ -67,6 +87,11 @@
     backface-visibility: hidden;
     transform: translateZ(0);
     z-index: 1;
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+
+    }
 }
 
 .questions__card-bg-image {
@@ -84,12 +109,22 @@
     color: var(--primary-color);
     font-size: 2.5rem;
     margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        margin-bottom: 1.6rem;
+    }
 }
 
 .questions__card-list-item {
     margin-bottom: 2.8rem;
     font-weight: 300;
     font-size: 2.5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+    }
 
     &:last-child {
         margin-bottom: 0;
@@ -105,6 +140,13 @@
     margin-right: 0.8rem;
     position: relative;
     margin-bottom: 0.5rem;
+
+    @include breakpoint(mobile) {
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-right: 0.5rem;
+        margin-bottom: 0.3rem;
+    }
     &::before,
     &::after {
         content: '';

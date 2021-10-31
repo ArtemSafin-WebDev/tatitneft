@@ -34,7 +34,7 @@
         position: absolute;
         right: 0;
         top: 100%;
-        margin-top: -23rem;
+        margin-top: -28rem;
         height: 15rem;
         width: 70%;
         background-color: #e6e6e6;
@@ -93,7 +93,7 @@
     line-height: 1.2;
 
     @include breakpoint(mobile) {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 }
 

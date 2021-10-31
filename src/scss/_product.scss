@@ -2,6 +2,10 @@
     margin-bottom: 20rem;
     position: relative;
     z-index: 80;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 10rem;
+    }
 }
 
 .product__heading {
@@ -38,6 +42,10 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     grid-gap: 2.5rem;
+
+    @include breakpoint(mobile) {
+        grid-gap: 2rem;
+    }
 }
 
 .product__card {
@@ -46,6 +54,10 @@
     box-shadow: 1rem 1rem 2rem rgba(black, 0.2);
     padding: 3rem;
     padding-right: 10rem;
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+    }
 }
 
 .product__card-heading {
@@ -53,6 +65,11 @@
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     color: var(--primary-color);
+
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .product__card-list {
@@ -64,6 +81,11 @@
     margin-bottom: 2.5rem;
     font-weight: 300;
     font-size: 2.5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+    }
 
     &::before {
         content: '';
@@ -89,6 +111,10 @@
     height: auto;
     display: block;
     z-index: -1;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .product__woman {
@@ -100,6 +126,9 @@
     z-index: 80;
     margin-bottom: 2.5rem;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12.5rem), 0 100%);
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .product__section-number {
@@ -110,4 +139,7 @@
     top: -30rem;
     right: 0;
     padding-right: 5rem;
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }

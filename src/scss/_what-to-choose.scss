@@ -2,6 +2,10 @@
     margin-bottom: 25rem;
     position: relative;
     z-index: 1;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 10rem;
+    }
 }
 
 .what-to-choose__bg {
@@ -12,29 +16,36 @@
     z-index: -1;
     width: 100%;
 
-    &::before {
-        content: '';
-        background-color: #e6e6e6;
-        height: 18rem;
-        position: absolute;
-        left: 0;
-        width: 50%;
-        transform: translateY(90%) rotate(var(--slant-angle, 0)) skew(var(--slant-angle, 0)) translateX(-2rem);
-        z-index: 10;
-        top: 0;
+    @include breakpoint(mobile) {
+        top: -5rem;
+        bottom: -5rem;
     }
 
-    &::after {
-        content: '';
-        background-color: #e6e6e6;
-        height: 10rem;
-        position: absolute;
-        left: 0;
-        width: 30%;
-        transform: translateY(25%) rotate(var(--slant-angle, 0)) skew(var(--slant-angle, 0)) translateX(-2rem);
-        z-index: 10;
-        bottom: 0;
-        z-index: 80;
+    @include breakpointMF(small-tablet) {
+        &::before {
+            content: '';
+            background-color: #e6e6e6;
+            height: 18rem;
+            position: absolute;
+            left: 0;
+            width: 50%;
+            transform: translateY(90%) rotate(var(--slant-angle, 0)) skew(var(--slant-angle, 0)) translateX(-2rem);
+            z-index: 10;
+            top: 0;
+        }
+
+        &::after {
+            content: '';
+            background-color: #e6e6e6;
+            height: 10rem;
+            position: absolute;
+            left: 0;
+            width: 30%;
+            transform: translateY(25%) rotate(var(--slant-angle, 0)) skew(var(--slant-angle, 0)) translateX(-2rem);
+            z-index: 10;
+            bottom: 0;
+            z-index: 80;
+        }
     }
 }
 
@@ -47,6 +58,10 @@
     background-color: #f2f2f2;
 
     clip-path: polygon(0 var(--slant-offset, 0), 100% 0, 100% calc(100% - var(--slant-offset, 0)), 0 100%);
+
+    @include breakpoint(mobile) {
+        clip-path: polygon(0 3rem, 100% 0, 100% calc(100% - 3rem), 0 100%);
+    }
 }
 
 .what-to-choose__heading {
@@ -80,6 +95,10 @@
     font-weight: 500;
     font-size: 2.5rem;
     text-align: center;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+    }
 }
 
 .what-to-choose__list {
@@ -88,6 +107,12 @@
     grid-gap: 3rem;
     align-items: center;
     margin-top: 7rem;
+
+    @include breakpoint(mobile) {
+        grid-gap: 2rem;
+        margin-top: 3rem;
+        grid-template-columns: minmax(0, 1fr);
+    }
 }
 
 .what-to-choose__card {
@@ -97,6 +122,10 @@
     border-radius: 1rem;
     background-color: #fff;
     box-shadow: 0.8rem 0.8rem 1.5rem rgba(black, 0.25);
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+    }
 }
 
 .what-to-choose__card-icon {
@@ -105,6 +134,11 @@
     flex-shrink: 0;
     margin-bottom: 1.4rem;
     object-fit: contain;
+
+    @include breakpoint(mobile) {
+        width: 6rem;
+        height: 6rem;
+    }
 }
 
 .what-to-choose__card-heading {
@@ -115,6 +149,12 @@
     position: relative;
     margin-bottom: 1rem;
     color: var(--primary-color);
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -122,13 +162,17 @@
         bottom: 0;
         width: 10rem;
         background-color: var(--primary-color);
-        height: 1px;
+        height: .2rem;
     }
 }
 
 .what-to-choose__card-text {
     font-weight: 300;
     font-size: 2.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+    }
     p {
         margin-bottom: 1.5rem;
         &:last-child {
@@ -146,6 +190,7 @@
     top: 4rem;
     right: 0;
     padding-right: 5rem;
+  
 
     &::before {
         content: '';
@@ -157,6 +202,14 @@
         height: 8rem;
         position: absolute;
         margin-top: 3rem;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        display: none;
     }
 }
 
@@ -168,4 +221,8 @@
     left: 0;
     bottom: 0;
     z-index: 40;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
