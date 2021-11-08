@@ -1,8 +1,34 @@
 .interface {
     margin-bottom: 25rem;
+    position: relative;
+    z-index: 7;
 
     @include breakpoint(mobile) {
         margin-bottom: 10rem;
+    }
+}
+
+.interface__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    @include breakpoint(mobile) {
+        display: none;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin-bottom: -15rem;
+        height: 15rem;
+        width: 65%;
+        background-color: var(--primary-color);
+        transform: skewY(var(--slant-angle, 0));
+        z-index: 30;
     }
 }
 
@@ -54,6 +80,18 @@
         background-repeat: no-repeat;
         background-position: center;
         z-index: -1;
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+}
+
+.inteface__slider--large-graphic {
+    &::before {
+        width: 200rem;
+        height: 60rem;
+
+      
     }
 }
 

@@ -1,6 +1,6 @@
 .taxes-intro {
     position: relative;
-    z-index: 1;
+    z-index: 8;
     margin-bottom: 10rem;
     color: white;
 
@@ -76,11 +76,30 @@
     display: flex;
     flex-direction: column;
     padding: 27rem 0;
+    position: relative;
 
     @include breakpoint(mobile) {
         padding-top: 14rem;
         padding-bottom: 7rem;
         min-height: auto;
+    }
+}
+
+.taxes-intro__image {
+    position: absolute;
+    right: 0;
+    top: 30rem;
+    width: 15rem;
+    height: auto;
+    z-index: 15;
+
+    @include breakpoint(mobile) {
+        position: static;
+        left: 0;
+        top: auto;
+        width: 10rem;
+        height: auto;
+        margin-bottom: 3.5rem;
     }
 }
 

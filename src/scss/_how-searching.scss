@@ -1,0 +1,184 @@
+.how-searching {
+    margin-bottom: 30rem;
+    position: relative;
+    z-index: 1;
+    @include breakpoint(mobile) {
+        margin-bottom: 10rem;
+    }
+}
+
+.how-searching__bg {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: -35rem;
+    width: 100%;
+    bottom: -35rem;
+    background-color: #e6e6e6;
+    clip-path: polygon(65% 0, 78% 0, 55% 100%, 20% 100%);
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.how-searching__heading {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 500;
+    margin-bottom: 5rem;
+    padding-top: 2.5rem;
+    position: relative;
+    @include breakpoint(mobile) {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        padding-top: 1.5rem;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 15rem;
+        height: 0.3rem;
+        top: 0;
+        background-color: var(--primary-color);
+        @include breakpoint(mobile) {
+            width: 10rem;
+        }
+    }
+}
+
+.how-searching__row {
+    padding-right: 28rem;
+    position: relative;
+    @include breakpoint(mobile) {
+        padding: 0;
+    }
+}
+
+.how-searching__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) minmax(0, 1.5fr);
+    grid-gap: 2rem;
+    grid-row-gap: 4rem;
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+    }
+}
+
+.how-searching__list-item {
+    position: relative;
+    @include breakpointMF(small-tablet) {
+        &:nth-child(3) {
+            padding-right: 13rem;
+        }
+    }
+
+    &::before {
+        content: counter(ordered-list, decimal-leading-zero);
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: #808080;
+        color: white;
+        border-radius: 50%;
+
+        font-weight: 800;
+        font-size: 2.5rem;
+        margin-bottom: -3rem;
+
+        @include breakpoint(mobile) {
+            width: 3.8rem;
+            height: 3.8rem;
+            font-size: 1.8rem;
+            line-height: 1.2;
+            margin: 0;
+            position: absolute;
+            left: -1rem;
+            top: 1.5rem;
+        }
+    }
+}
+
+.how-searching__card-icon {
+    width: 18rem;
+    height: 18rem;
+    flex-shrink: 0;
+    margin-bottom: 3rem;
+    object-fit: contain;
+    object-position: center bottom;
+    @include breakpoint(mobile) {
+        width: 9rem;
+        height: 9rem;
+        margin-bottom: 1.8rem;
+    }
+}
+
+.how-searching__card-text {
+    font-weight: 300;
+    font-size: 2.2rem;
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+    }
+}
+
+.how-searching__info {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 42rem;
+    border-radius: 1rem;
+    padding: 3rem;
+    border: 0.3rem solid var(--primary-color);
+
+    @include breakpoint(mobile) {
+        border-width: .2rem;
+        padding: 2rem;
+        width: 100%;
+        position: static;
+        margin-top: 5rem;
+    }
+}
+
+.how-searching__info-heading {
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: var(--primary-color);
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 1.8rem;
+    }
+}
+
+.how-searching__info-list-item {
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-size: 2.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        margin-bottom: 1.7rem;
+    }
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        margin-right: 0.4rem;
+        background-color: black;
+        margin-top: -0.3rem;
+        vertical-align: middle;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

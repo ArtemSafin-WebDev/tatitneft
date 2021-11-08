@@ -1,0 +1,213 @@
+.search-stages {
+    position: relative;
+    z-index: 5;
+    color: white;
+    margin-bottom: 38rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 10rem;
+    }
+}
+
+.search-stages__bg {
+    position: absolute;
+    left: 0;
+    top: -30rem;
+    width: 100%;
+    bottom: -40rem;
+
+    @include breakpoint(mobile) {
+        top: -5rem;
+        bottom: -5rem;
+    }
+    // z-index: -1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 100%;
+        margin-top: -15rem;
+        height: 15rem;
+        width: 40%;
+        background-color: #e6e6e6;
+        transform: skewY(var(--slant-angle, 0));
+        z-index: 30;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-top: 2rem;
+        // margin-top: -15rem;
+        height: 15rem;
+        width: 45%;
+        background-color: var(--primary-color);
+        transform: skewY(var(--slant-angle, 0));
+        z-index: 30;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+}
+
+.search-stages__bg-image-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    clip-path: polygon(0 var(--slant-offset, 0), 100% 0, 100% calc(100% - var(--slant-offset, 0)), 0 100%);
+
+    @include breakpoint(mobile) {
+        clip-path: polygon(0 3rem, 100% 0, 100% calc(100% - 3rem), 0 100%);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(black, 0.7);
+    }
+}
+
+.search-stages__bg-image {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.search-stages__heading {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 500;
+    margin-bottom: 15rem;
+    padding-top: 2.5rem;
+    position: relative;
+    @include breakpoint(mobile) {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        padding-top: 1.5rem;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 15rem;
+        height: 0.3rem;
+        top: 0;
+        background-color: var(--primary-color);
+        @include breakpoint(mobile) {
+            width: 10rem;
+        }
+    }
+}
+
+.search-stages__list {
+    max-width: 100rem;
+    margin: 0 auto;
+    width: 100%;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        max-width: none;
+    }
+}
+
+.search-stages__list-item {
+    position: relative;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &::before {
+        content: counter(ordered-list, decimal-leading-zero);
+        font-weight: 500;
+        font-size: 4.5rem;
+        line-height: 1.2;
+        position: absolute;
+        left: 0;
+        top: -1.5rem;
+
+        @include breakpoint(mobile) {
+            position: static;
+            left: auto;
+            top: auto;
+            font-size: 2.4rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+    }
+}
+
+.search-stages__card-title {
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+    }
+}
+
+.search-stages__card-text {
+    font-weight: 300;
+    font-size: 2.5rem;
+    max-width: 60rem;
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+    }
+}
+
+.search-stages__card {
+    @include breakpointMF(small-tablet) {
+        padding-left: 25rem;
+        position: relative;
+        padding-bottom: 8rem;
+
+        .search-stages__list-item:last-child & {
+            padding-bottom: 0;
+        }
+        &::before {
+            content: '';
+            left: 10rem;
+            width: 1px;
+            background-color: #fff;
+            top: -2.5rem;
+            bottom: 0;
+            position: absolute;
+        }
+
+        .search-stages__list-item:last-child & {
+            &::before {
+                bottom: -25rem;
+            }
+        }
+
+        &::after {
+            content: '';
+            left: 7rem;
+            width: 15rem;
+            height: 1px;
+            background-color: #fff;
+            position: absolute;
+            top: 1.2rem;
+        }
+    }
+}

@@ -1,0 +1,94 @@
+.about-system {
+    margin-bottom: 22rem;
+    position: relative;
+    z-index: 3;
+    @include breakpoint(mobile) {
+        margin-bottom: 10rem;
+    }
+}
+
+.about-system__bg {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: -35rem;
+    width: 100%;
+    bottom: -25rem;
+    background-color: #e6e6e6;
+    clip-path: polygon(65% 0, 78% 0, 55% 100%, 20% 100%);
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.about-system__heading {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 500;
+    margin-bottom: 5rem;
+    padding-top: 2.5rem;
+    position: relative;
+    @include breakpoint(mobile) {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        padding-top: 1.5rem;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 15rem;
+        height: 0.3rem;
+        top: 0;
+        background-color: var(--primary-color);
+        @include breakpoint(mobile) {
+            width: 10rem;
+        }
+    }
+}
+
+.about-system__image {
+    position: absolute;
+    right: 0;
+    top: 8rem;
+    width: 75rem;
+    z-index: -1;
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.about-system__content {
+    max-width: 85rem;
+
+}
+
+.about-system__inner-heading {
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        margin-bottom: 2.5rem;
+    }
+}
+
+.about-system__text {
+    font-size: 2.5rem;
+    font-weight: 300;
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+    }
+    p {
+        margin-bottom: 3rem;
+        @include breakpoint(mobile) {
+            margin-bottom: 1.5rem;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
